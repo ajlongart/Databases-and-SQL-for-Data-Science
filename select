@@ -1,0 +1,9 @@
+select COLUMN1, COLUMN2, ... from TABLE1 ;
+
+select ID, NAME from COUNTRY ;
+
+select * from COUNTRY ;
+
+select * from COUNTRY where ID < 5 ;
+
+select * from COUNTRY where CCODE = 'CA'; 

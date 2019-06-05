@@ -1,0 +1,45 @@
+create table TABLENAME (
+    COLUMN1 datatype,
+    COLUMN2 datatype,
+    COLUMN3, datatype,
+        ...
+    ) ;
+    
+    create table TEST (
+    ID integer,
+    NAME varchar(30)
+    );
+    
+    
+    create table COUNTRY (
+    ID int,
+    CCODE char(2),
+    NAME varchar(60)
+    );
+    
+    
+    create table COUNTRY (
+    ID int NOT NULL,
+    CCODE char(2),
+    NAME varchar(60),
+    PRIMARY KEY (ID)
+    );
+    
+    In the above example the ID column has the "NOT NULL" constraint added after the datatype 
+    - meaning that it cannot contain a NULL or an empty value. 
+    If you look at the last row in the create table statement above you will note that we are using ID
+    as a Primary Key and the database does not allow Primary Keys to have NULL values. 
+    A Primary Key is a unique identifier in a table, and using Primary Keys can help speed up your queries significantly.
+    
+    If the table you are trying to create already exists in the database, 
+    you will get an error indicating "table XXX.YYY already exists". 
+    To circumvent this error, either create a table with a different name or first DROP the existing table. 
+    It is quite common to issue a DROP before doing a CREATE in test and development scenarios. 
+    
+    drop table COUNTRY;
+    create table COUNTRY (
+    ID integer PRIMARY KEY NOT NULL,
+    CCODE char(2),
+    NAME varchar(60)
+    );
+    
